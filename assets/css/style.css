@@ -1,0 +1,22 @@
+/*Efeitos Fades*/
+.fade {
+    opacity: 0;
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+.fade.show {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.fade-top {
+    transform: translateY(-50px);
+}
+.fade-bottom {
+    transform: translateY(50px);
+}
+.fade-left {
+    transform: translateX(-50px);
+}
+.fade-right {
+    transform: translateX(50px);
+}
