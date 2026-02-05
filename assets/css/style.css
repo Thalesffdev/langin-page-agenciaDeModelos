@@ -20,3 +20,31 @@
 .fade-right {
     transform: translateX(50px);
 }
+
+/* Correções responsivas para evitar overflow lateral em mobile */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Força que blocos não ultrapassem a largura do dispositivo quando houver conteúdo grande */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Otimizações para interação touch no mobile */
+#lan-slide-area {
+    touch-action: pan-y; /* permite scroll vertical, bloqueia horizontal para permitir swipe */
+    user-select: none; /* evita seleção de texto durante swipe */
+    -webkit-user-select: none;
+}
+
+#slide-track {
+    cursor: grab;
+}
+
+#slide-track.dragging {
+    cursor: grabbing;
+}
